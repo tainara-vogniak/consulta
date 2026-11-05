@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!-- diz ao navegador que é um arquivo HTML5 -->
+<html lang="pt-BR"> <!-- início da página, idioma português -->
+<head> <!-- configurações da página -->
+    <meta charset="UTF-8"> <!-- permite acentos e caracteres especiais -->
+    <title>Tabela FIPE</title> <!-- título que aparece na aba do navegador -->
+</head>
+<body> <!-- conteúdo visível da página -->
+    <h1>Tabela FIPE - Carros</h1> <!-- título principal -->
+    <button onclick="carregarMarcas()">Carregar marcas</button> <!-- botão que busca as marcas -->
+
+    <br><br> <!-- espaço entre os campos -->
+    <select id="marcas" onchange="carregarModelos()"></select> <!-- lista de marcas; ao escolher, busca os modelos -->
+    <select id="modelos" onchange="carregarAnos()"></select> <!-- lista de modelos; ao escolher, busca os anos -->
+    <select id="anos" onchange="mostrarPreco()"></select> <!-- lista de anos; ao escolher, mostra o preço -->
+
+    <div id="status"></div> <!-- espaço para mensagens (carregando, erro) -->
+    <p id="resultado"></p> <!-- aqui aparece o resultado final -->
+
+    <script src="fipeApi.js"></script> <!-- liga o arquivo JavaScript à página -->
+</body>
+</html>
